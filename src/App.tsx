@@ -13,8 +13,8 @@ function App() {
       <LocationSection />
       <FloatingWhatsApp />
       
-      <footer className="bg-surface-base py-12 border-t border-white/5 text-center px-4">
-        <p className="font-sans text-text-muted text-sm tracking-wide">
+      <footer className="bg-surface-base py-12 border-t border-emerald-100 text-center px-4">
+        <p className="font-sans text-text-secondary text-sm tracking-wide">
           © {new Date().getFullYear()} AmigoVet Clínica Veterinária II. Todos os direitos reservados.
         </p>
       </footer>

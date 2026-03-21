@@ -21,8 +21,8 @@ export const TestimonialsSection = () => {
     <section className="py-32 relative z-10 bg-surface-raw" id="depoimentos">
       <div className="container mx-auto px-4 max-w-7xl">
         <div className="mb-20 text-center">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-light text-white tracking-tight mb-4">
-            A voz da <span className="font-serif italic text-emerald-300">nossa comunidade</span>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-light text-text-primary tracking-tight mb-4">
+            A voz da <span className="font-serif italic text-emerald-600">nossa comunidade</span>
           </h2>
         </div>
 
@@ -34,20 +34,20 @@ export const TestimonialsSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ delay: i * 0.1, type: "spring", stiffness: 150, damping: 20 }}
-              className="bg-surface-base border border-white/5 rounded-[2rem] p-10 relative group hover:border-primary/20 transition-colors"
+              className="bg-surface-elevated shadow-sm border border-emerald-50 rounded-[2rem] p-10 relative group hover:shadow-lg transition-all"
             >
               <Quote className="w-10 h-10 text-primary/20 mb-6 group-hover:text-primary/40 transition-colors" />
               
-              <p className="text-text-secondary text-xl font-serif italic mb-10 min-h-[100px] leading-relaxed">
+              <p className="text-text-primary text-xl font-serif italic mb-10 min-h-[100px] leading-relaxed">
                 "{review.text}"
               </p>
 
-              <div className="flex items-center gap-4 border-t border-white/5 pt-6">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-slate-700 to-slate-800 flex items-center justify-center text-white font-display font-bold">
+              <div className="flex items-center gap-4 border-t border-emerald-50 pt-6">
+                <div className="w-12 h-12 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-800 font-display font-bold text-lg">
                   {review.name.charAt(0)}
                 </div>
                 <div>
-                  <h4 className="text-white font-display font-semibold">{review.name}</h4>
+                  <h4 className="text-text-primary font-display font-bold">{review.name}</h4>
                   <div className="flex gap-1 mt-1">
                     {[1, 2, 3, 4, 5].map((star) => (
                       <svg key={star} className="w-3 h-3 text-primary" fill="currentColor" viewBox="0 0 20 20">

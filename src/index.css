@@ -3,16 +3,16 @@
 @theme {
   --color-primary: #10B981;
   --color-primary-dim: #059669;
-  --color-primary-glow: rgba(16, 185, 129, 0.4);
+  --color-primary-glow: rgba(16, 185, 129, 0.2);
   --color-whatsapp: #25D366;
   
-  --color-surface-base: #020617;
-  --color-surface-raw: #0F172A;
-  --color-surface-elevated: #1E293B;
+  --color-surface-base: #F0FDF4; /* Green 50 (Pastel Mint) */
+  --color-surface-raw: #DCFCE7; /* Green 100 */
+  --color-surface-elevated: #FFFFFF;
 
-  --color-text-primary: #F8FAFC;
-  --color-text-secondary: #CBD5E1;
-  --color-text-muted: #94A3B8;
+  --color-text-primary: #064E3B; /* Deep Emerald */
+  --color-text-secondary: #0F766E; /* Teal 700 */
+  --color-text-muted: #64748B; /* Slate 500 */
 
   --font-display: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
   --font-serif: "Instrument Serif", ui-serif, Georgia, serif;
@@ -21,26 +21,26 @@
 
 @layer utilities {
   .clinical-glass {
-    @apply bg-slate-800/40 backdrop-blur-2xl border border-white/10 shadow-[inset_0_1px_0_rgba(255,255,255,0.1)];
+    @apply bg-white/70 backdrop-blur-3xl border border-emerald-100 shadow-[0_8px_30px_rgba(16,185,129,0.05)];
   }
 }
 
 @layer base {
   body {
     @apply bg-surface-base text-text-primary font-sans antialiased;
-    /* Soft noise texture + deep marine blue gradient for a clinical yet warm dark mode */
+    /* Soft pastel gradient for clinical airy feel */
     background-image: 
-      radial-gradient(circle at 100% 0%, rgba(16, 185, 129, 0.05) 0%, rgba(2, 6, 23, 1) 50%),
-      radial-gradient(circle at 0% 100%, rgba(13, 148, 136, 0.05) 0%, rgba(2, 6, 23, 1) 50%);
+      radial-gradient(circle at 100% 0%, rgba(255, 255, 255, 0.8) 0%, rgba(240, 253, 244, 1) 50%),
+      radial-gradient(circle at 0% 100%, rgba(209, 250, 229, 0.5) 0%, rgba(240, 253, 244, 1) 50%);
     background-attachment: fixed;
   }
 
   ::selection {
-    @apply bg-primary/30 text-emerald-100;
+    @apply bg-emerald-200 text-emerald-900;
   }
 
   * {
     scrollbar-width: thin;
-    scrollbar-color: #334155 transparent;
+    scrollbar-color: #cbd5e1 transparent;
   }
 }

@@ -1,14 +1,16 @@
 import { motion } from 'framer-motion';
 import { Button } from '../ui/Button';
-import { OrbEffect } from '../ui/OrbEffect';
+import { FurBrush } from '../ui/FurBrush';
+import { CollarTagSpin } from '../ui/CollarTagSpin';
+import { PawPressure } from '../ui/PawPressure';
 import heroBg from '@/assets/amigovet_hero_bg.png';
-import { HeartPulse } from 'lucide-react';
 
 export const HeroSection = () => {
   return (
     <section className="relative min-h-dvh flex items-center pt-24 overflow-hidden bg-surface-base">
-      <OrbEffect />
-      
+      {/* FurBrush — interactive fur layer, pointer-events on top */}
+      <FurBrush className="z-[5]" />
+
       {/* Background Graphic */}
       <div className="absolute inset-0 z-0 opacity-80 mix-blend-multiply">
         <div className="absolute inset-0 bg-linear-to-b from-surface-base/50 via-surface-base/90 to-surface-base z-10" />
@@ -18,16 +20,14 @@ export const HeroSection = () => {
       <div className="container relative z-20 px-4 mx-auto max-w-7xl">
         <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
           
+          {/* CollarTag Badge — tap to spin and reveal contact info */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9, filter: "blur(10px)" }}
             animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
             transition={{ duration: 1, type: "spring", stiffness: 100, damping: 20 }}
-            className="mb-12 inline-flex items-center gap-2 clinical-glass px-6 py-3 rounded-full border border-primary/20"
+            className="mb-12 flex justify-center"
           >
-            <HeartPulse className="w-5 h-5 text-primary animate-pulse" />
-            <span className="text-sm font-display font-medium text-primary tracking-wide">
-              Especialidades & Medicina Avançada
-            </span>
+            <CollarTagSpin />
           </motion.div>
 
           <motion.h1 
@@ -55,9 +55,11 @@ export const HeroSection = () => {
             className="flex flex-col sm:flex-row items-center gap-6"
           >
             <a href="https://wa.me/5511970706009" target="_blank" rel="noopener noreferrer">
-              <Button size="large">
-                Agendar Consulta
-              </Button>
+              <PawPressure>
+                <Button size="large">
+                  Agendar Consulta
+                </Button>
+              </PawPressure>
             </a>
             <div className="flex items-center gap-4 text-left border-l border-emerald-200 pl-6 h-12">
               <div className="flex -space-x-2">

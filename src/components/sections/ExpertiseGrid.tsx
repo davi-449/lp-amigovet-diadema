@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Stethoscope, Activity, Flower2, Search, Dna } from 'lucide-react';
 import { BentoCard } from '../ui/BentoCard';
+import { StethoscopeReveal } from '../ui/StethoscopeReveal';
 
 export const ExpertiseGrid = () => {
   return (
@@ -28,16 +29,11 @@ export const ExpertiseGrid = () => {
               </div>
               <div>
                 <h3 className="text-3xl font-display font-bold text-text-primary mb-4">Especialidades Clínicas</h3>
-                <p className="text-text-secondary font-sans max-w-lg mb-8 leading-relaxed">
+                <p className="text-text-secondary font-sans max-w-lg mb-4 leading-relaxed">
                   Veterinários especialistas focados em patologias específicas para um direcionamento exato e tratamento efetivo.
                 </p>
-                <div className="flex flex-wrap gap-2">
-                  {['Oncologia', 'Nefrologia', 'Cardiologia', 'Endocrinologia', 'Oftalmologia', 'Odontologia', 'Gastrologia'].map(spec => (
-                    <span key={spec} className="px-3 py-1.5 rounded-full border border-emerald-100 bg-emerald-50/50 text-sm font-sans text-emerald-800">
-                      {spec}
-                    </span>
-                  ))}
-                </div>
+                {/* StethoscopeReveal — interactive EKG + specialty tags */}
+                <StethoscopeReveal />
               </div>
             </BentoCard>
           </motion.div>

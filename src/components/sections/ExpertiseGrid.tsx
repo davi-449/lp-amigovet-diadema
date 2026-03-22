@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion';
-import { Stethoscope, Activity, Flower2, Search, Dna } from 'lucide-react';
+import { Stethoscope, Activity, Search, Dna } from 'lucide-react';
 import { BentoCard } from '../ui/BentoCard';
 import { StethoscopeReveal } from '../ui/StethoscopeReveal';
+import { GroomingCard } from '../ui/GroomingCard';
 
 export const ExpertiseGrid = () => {
   return (
@@ -51,17 +52,9 @@ export const ExpertiseGrid = () => {
             </BentoCard>
           </motion.div>
 
-          {/* Terapias Alternativas */}
-          <motion.div className="md:col-span-5 flex flex-col">
-            <BentoCard className="flex-1 flex flex-col justify-between">
-              <Flower2 className="w-12 h-12 text-teal-500 mb-8 opacity-80" strokeWidth={1.5} />
-              <div>
-                <h3 className="text-2xl font-display font-bold text-text-primary mb-3">Terapias Integrativas</h3>
-                <p className="text-text-secondary font-sans leading-relaxed">
-                  Cuidado holístico para controle de dor e ansiedade. Sessões guiadas de Acupuntura, Fisioterapia e Reiki.
-                </p>
-              </div>
-            </BentoCard>
+          {/* Centro Estético (Grooming Card) */}
+          <motion.div className="md:col-span-5 flex flex-col min-h-[300px] h-full">
+            <GroomingCard />
           </motion.div>
 
           {/* Atendimento Geral */}

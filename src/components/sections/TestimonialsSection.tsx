@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import { Quote } from 'lucide-react';
-import { SleepingPet } from '../ui/SleepingPet';
 
 const reviews = [
   {
@@ -22,10 +21,6 @@ export const TestimonialsSection = () => {
     <section className="py-32 relative z-10 bg-surface-raw" id="depoimentos">
       <div className="container mx-auto px-4 max-w-7xl">
         <div className="mb-20 text-center">
-          {/* Sleeping pet mascot — wakes up on scroll */}
-          <div className="flex justify-center mb-4">
-            <SleepingPet />
-          </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-light text-text-primary tracking-tight mb-4">
             A voz da <span className="font-serif italic text-emerald-600">nossa comunidade</span>
           </h2>

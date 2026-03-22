@@ -30,7 +30,7 @@ export function VaccineScroll() {
 
   return (
     <div
-      className="fixed right-4 top-1/2 -translate-y-1/2 z-50 flex flex-col items-center gap-2 select-none"
+      className="fixed right-0 md:right-4 top-1/2 -translate-y-1/2 z-40 flex flex-col items-center gap-2 select-none pointer-events-none md:pointer-events-auto opacity-40 md:opacity-100 mix-blend-multiply md:mix-blend-normal transition-opacity duration-300"
       style={{ touchAction: 'none' }}
       onClick={() => setShowTooltip((v) => !v)}
       aria-label={`Progresso da página: ${progress}%`}

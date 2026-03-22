@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Button } from '../ui/Button';
-import { FurBrush } from '../ui/FurBrush';
+import { OrbEffect } from '../ui/OrbEffect';
 import { CollarTagSpin } from '../ui/CollarTagSpin';
 import { PawPressure } from '../ui/PawPressure';
 import heroBg from '@/assets/amigovet_hero_bg.png';
@@ -8,8 +8,8 @@ import heroBg from '@/assets/amigovet_hero_bg.png';
 export const HeroSection = () => {
   return (
     <section className="relative min-h-dvh flex items-center pt-24 overflow-hidden bg-surface-base">
-      {/* FurBrush — interactive fur layer, pointer-events on top */}
-      <FurBrush className="z-[5]" />
+      {/* OrbEffect — clean, premium atmospheric glow */}
+      <OrbEffect />
 
       {/* Background Graphic */}
       <div className="absolute inset-0 z-0 opacity-80 mix-blend-multiply">

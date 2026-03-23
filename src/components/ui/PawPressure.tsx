@@ -36,8 +36,8 @@ export function PawPressure({ children, className = '' }: PawPressureProps) {
           <motion.div
             key={paw.id}
             initial={{ scale: 0, opacity: 0, rotate: -15 }}
-            animate={{ scale: 1, opacity: 0.85, rotate: 0 }}
-            exit={{ scale: 1.2, opacity: 0 }}
+            animate={{ scale: 1, opacity: 0.25, rotate: 0 }}
+            exit={{ scale: 1.2, opacity: 0, transition: { duration: 0.6, ease: "easeOut" } }}
             transition={{ type: 'spring', stiffness: 300, damping: 20 }}
             className="pointer-events-none absolute z-10"
             style={{
@@ -66,7 +66,7 @@ export function PawPressure({ children, className = '' }: PawPressureProps) {
               initial={{ scale: 0.5, opacity: 0.6 }}
               animate={{ scale: 2.5, opacity: 0 }}
               transition={{ duration: 0.8 }}
-              className="absolute inset-0 rounded-full bg-emerald-400"
+              className="absolute inset-0 rounded-full bg-emerald-400 blur-[12px]"
             />
           </motion.div>
         ))}

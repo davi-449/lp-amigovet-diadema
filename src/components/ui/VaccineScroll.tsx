@@ -30,7 +30,7 @@ export function VaccineScroll() {
 
   return (
     <div
-      className="fixed right-0 md:right-4 top-1/2 -translate-y-1/2 z-40 flex flex-col items-center gap-2 select-none pointer-events-none md:pointer-events-auto opacity-40 md:opacity-100 mix-blend-multiply md:mix-blend-normal transition-opacity duration-300"
+      className="fixed right-[-4px] md:right-4 top-1/2 -translate-y-1/2 z-40 hidden min-[480px]:flex flex-col items-center gap-2 select-none pointer-events-none md:pointer-events-auto opacity-40 md:opacity-100 mix-blend-multiply md:mix-blend-normal transition-opacity duration-300"
       style={{ touchAction: 'none' }}
       onClick={() => setShowTooltip((v) => !v)}
       aria-label={`Progresso da página: ${progress}%`}
@@ -98,10 +98,12 @@ export function VaccineScroll() {
           {/* Needle */}
           <line x1="12" y1="100" x2="12" y2="120" stroke="#059669" strokeWidth="1.5" strokeLinecap="round" />
           
-          {/* Plunger handle */}
-          <rect x="6" y="14" width="12" height="6" rx="1.5" fill="#059669" opacity="0.8" />
-          <line x1="12" y1="8" x2="12" y2="14" stroke="#059669" strokeWidth="1.5" />
-          <rect x="7" y="4" width="10" height="4" rx="1" fill="#059669" opacity="0.6" />
+          {/* Plunger handle (hidden on mobile) */}
+          <g className="hidden md:block">
+            <rect x="6" y="14" width="12" height="6" rx="1.5" fill="#059669" opacity="0.8" />
+            <line x1="12" y1="8" x2="12" y2="14" stroke="#059669" strokeWidth="1.5" />
+            <rect x="7" y="4" width="10" height="4" rx="1" fill="#059669" opacity="0.6" />
+          </g>
         </svg>
       </div>
 
@@ -112,14 +114,14 @@ export function VaccineScroll() {
             key="check"
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
-            className="w-6 h-6 rounded-full bg-emerald-500 flex items-center justify-center shadow-md shadow-emerald-300/50"
+            className="hidden md:flex w-6 h-6 rounded-full bg-emerald-500 items-center justify-center shadow-md shadow-emerald-300/50"
           >
             <Check size={12} className="text-white" strokeWidth={3} />
           </motion.div>
         ) : (
           <motion.span
             key="pct"
-            className="text-[9px] font-bold text-emerald-700 font-sans tabular-nums"
+            className="hidden md:block text-[9px] font-bold text-emerald-700 font-sans tabular-nums"
           >
             {progress}%
           </motion.span>

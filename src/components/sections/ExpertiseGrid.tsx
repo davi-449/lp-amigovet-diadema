@@ -17,22 +17,26 @@ export const ExpertiseGrid = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 auto-rows-[minmax(300px,_auto)]">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 auto-rows-[minmax(300px,auto)]">
           
           {/* Especialidades Clínicas */}
           <motion.div className="md:col-span-8 flex flex-col">
-            <BentoCard className="flex-1 flex flex-col justify-between group/card hover:border-primary/30 transition-colors">
-              <div className="flex justify-between items-start mb-8">
-                <div className="w-16 h-16 rounded-full bg-emerald-50 border border-emerald-100 flex items-center justify-center text-primary group-hover/card:bg-primary group-hover/card:text-white transition-colors duration-500">
-                  <Dna size={32} strokeWidth={1.5} />
+            <BentoCard className="flex-1 flex flex-col md:grid md:grid-cols-2 gap-8 group/card hover:border-primary/30 transition-colors relative overflow-hidden pb-16">
+              <div className="relative z-10 flex flex-col justify-between">
+                <div className="flex justify-between items-start mb-8">
+                  <div className="w-16 h-16 rounded-full bg-emerald-50 border border-emerald-100 flex items-center justify-center text-primary group-hover/card:bg-primary group-hover/card:text-white transition-colors duration-500">
+                    <Dna size={32} strokeWidth={1.5} />
+                  </div>
+                  <span className="clinical-glass px-4 py-1 rounded-full text-xs text-primary font-display border-emerald-200 bg-white/80">Complex Care</span>
                 </div>
-                <span className="clinical-glass px-4 py-1 rounded-full text-xs text-primary font-display border-emerald-200 bg-white/80">Complex Care</span>
+                <div>
+                  <h3 className="text-3xl font-display font-bold text-text-primary mb-4">Especialidades Clínicas</h3>
+                  <p className="text-text-secondary font-sans leading-relaxed">
+                    Veterinários especialistas focados em patologias específicas para um direcionamento exato e tratamento efetivo.
+                  </p>
+                </div>
               </div>
-              <div>
-                <h3 className="text-3xl font-display font-bold text-text-primary mb-4">Especialidades Clínicas</h3>
-                <p className="text-text-secondary font-sans max-w-lg mb-4 leading-relaxed">
-                  Veterinários especialistas focados em patologias específicas para um direcionamento exato e tratamento efetivo.
-                </p>
+              <div className="relative z-10 flex flex-col">
                 {/* StethoscopeReveal — interactive EKG + specialty tags */}
                 <StethoscopeReveal />
               </div>
@@ -41,7 +45,7 @@ export const ExpertiseGrid = () => {
 
           {/* Exames */}
           <motion.div className="md:col-span-4 flex flex-col">
-            <BentoCard className="flex-1 flex flex-col justify-between bg-gradient-to-br from-white to-emerald-50">
+            <BentoCard className="flex-1 flex flex-col justify-between bg-linear-to-br from-white to-emerald-50">
               <Search className="w-12 h-12 text-emerald-500 mb-8 opacity-80" strokeWidth={1.5} />
               <div>
                 <h3 className="text-2xl font-display font-bold text-text-primary mb-3">Imagens & Lab</h3>
@@ -59,15 +63,15 @@ export const ExpertiseGrid = () => {
 
           {/* Atendimento Geral */}
           <motion.div className="md:col-span-7 flex flex-col">
-            <BentoCard className="flex-1 flex flex-col justify-between md:flex-row items-center gap-8">
-              <div className="flex-1">
-                <Stethoscope className="w-12 h-12 text-primary mb-6" strokeWidth={1.5} />
+            <BentoCard className="flex-1 flex flex-col md:grid md:grid-cols-2 lg:flex-row items-center gap-8 relative overflow-hidden">
+              <Stethoscope className="absolute top-6 right-6 w-16 h-16 text-primary opacity-10" strokeWidth={1.5} />
+              <div className="flex-1 relative z-10">
                 <h3 className="text-3xl font-display font-bold text-text-primary mb-4">Clínica Geral & Cirurgia</h3>
                 <p className="text-text-secondary font-sans leading-relaxed max-w-md">
                   A base de todo o cuidado. Check-ups, bloco cirúrgico equipado, vacinação e suporte contínuo para o dia a dia.
                 </p>
               </div>
-              <div className="w-full md:w-48 h-48 rounded-full border-2 border-dashed border-emerald-200 flex items-center justify-center relative bg-emerald-50/50">
+              <div className="w-full md:w-48 lg:w-48 h-48 rounded-full border-2 border-dashed border-emerald-200 flex items-center justify-center relative bg-emerald-50/50 mx-auto">
                 <div className="absolute inset-0 rounded-full bg-primary/10 blur-xl animate-pulse" />
                 <Activity className="w-16 h-16 text-primary/70" strokeWidth={1} />
               </div>

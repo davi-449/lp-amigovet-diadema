@@ -37,7 +37,7 @@ export const LocationSection = () => {
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1826.9657494589333!2d-46.6006451!3d-23.6749071!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce44bd7f0e9dd1%3A0x6bd7fcbe5b7a0f79!2sAmigovet%20Cl%C3%ADnica%20Veterin%C3%A1ria%20II!5e0!3m2!1spt-BR!2sbr!4v1715000000000!5m2!1spt-BR!2sbr" 
           width="100%" 
           height="100%" 
-          style={{ border: 0, filter: 'contrast(1.1) opacity(0.5)' }} 
+          style={{ border: 0, mixBlendMode: 'luminosity', opacity: 0.85 }} 
           allowFullScreen 
           loading="lazy" 
           referrerPolicy="no-referrer-when-downgrade"
